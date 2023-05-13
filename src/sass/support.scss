@@ -21,10 +21,8 @@ p {
 }
 
 .support {
-  width: 356px;
-  height: 490px;
-  // left: 24px;
-  // top: 670px;
+  width: 335px;
+  height: 352px;
   padding-top: 24px;
   position: relative;
 
@@ -36,6 +34,11 @@ p {
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
+
+  @media screen and (min-width: 1440px) {
+    width: 356px;
+    height: 490px;
+  }
 }
 
 .support-container {
@@ -68,9 +71,28 @@ p {
   display: flex;
   align-items: center;
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid var(--accent-secondary);
+  // &:hover,
+  // &:focus {
+  //   border-right: 1px solid var(--accent-secondary);
+  //   transition-property: color;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // }
+
+  &:hover > .support__number,
+  &:focus > .support__number {
+    color: var(--accent-secondary);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover > .support__img,
+  &:focus > .support__img {
+    filter: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -90,13 +112,18 @@ p {
 
 .support__img {
   height: 32px;
-  filter: brightness(0) invert(1);
+  // filter: brightness(0) invert(1);
 }
 
 .swiper-container {
   width: 159px;
-  height: 292px;
+  height: 188px;
   overflow: hidden;
+
+  @media screen and (min-width: 1440px) {
+    width: 159px;
+    height: 292px;
+  }
 }
 
 .swiper-navigation {

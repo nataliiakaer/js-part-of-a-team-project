@@ -1,5 +1,11 @@
 import Swiper from 'swiper/swiper-bundle';
 import 'swiper/swiper-bundle.min.css';
+import { supportList } from './js/support_list';
+import { createImageItemMurkup } from './js/createMarkupSupportSection';
+
+const supportContainer = document.querySelector('.swiper-wrapper');
+const imageMarkup = createImageItemMurkup(supportList);
+supportContainer.insertAdjacentHTML('beforeend', imageMarkup);
 
 swiperContainer = document.querySelector('.swiper-container');
 
