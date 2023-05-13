@@ -1,6 +1,5 @@
 @import './variables/colors';
 @import './variables/fonts';
-
 a {
   text-decoration: none;
 }
@@ -112,7 +111,7 @@ p {
 
 .support__img {
   height: 32px;
-  // filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 
 .swiper-container {
@@ -141,9 +140,13 @@ p {
 
   background-color: #fff;
   border-radius: 50%;
-  top: 440px !important;
+  top: 320px !important;
   right: auto !important;
   left: auto !important;
+
+  @media screen and (min-width: 1440px) {
+    top: 440px !important;
+  }
 }
 
 .swiper-button-next:after {
