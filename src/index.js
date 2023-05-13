@@ -1,8 +1,34 @@
-import { supportList } from './support_list';
+import Swiper from 'swiper/swiper-bundle';
+import 'swiper/swiper-bundle.min.css';
 
-// console.log(supportList);
+swiperContainer = document.querySelector('.swiper-container');
 
-const url = new URL(
-  'https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123'
-);
-console.log(url.search);
+swiperOptions = {
+  direction: 'vertical',
+  slidesPerView: 6,
+  spaceBetween: 20,
+  rewind: true,
+  speed: 400,
+  paginationClickable: true,
+  grabCursor: true,
+  waitForTransition: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // breakpoints: {
+  //   375: {
+  //     slidesPerView: 4,
+  //     spaceBetween: 12,
+  //     loop: true,
+  //   },
+  //   1024: {
+  //     slidesPerView: 6,
+  //     spaceBetween: 12,
+  //     loop: true,
+  //     loopedSlides: 1,
+  //   },
+  // },
+};
+
+carousel = new Swiper(swiperContainer, swiperOptions);
