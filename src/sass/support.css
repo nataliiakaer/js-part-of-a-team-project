@@ -9,46 +9,54 @@
 }
 
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 700;
   font-style: italic;
-  src: url("/src/fonts/dmsans-bolditalic-webfont.woff");
-  src: local(""), url("/src/fonts/dmsans-bolditalic-webfont.woff2") format("woff2"), url("/src/fonts/dmsans-bolditalic-webfont.woff") format("woff");
+  src: url('/src/fonts/dmsans-bolditalic-webfont.woff');
+  src: local(''),
+    url('/src/fonts/dmsans-bolditalic-webfont.woff2') format('woff2'),
+    url('/src/fonts/dmsans-bolditalic-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 700;
   font-style: normal;
-  src: url("/src/fonts/dmsans-bold-webfont.woff");
-  src: local(""), url("/src/fonts/dmsans-bold-webfont.woff2") format("woff2"), url("/src/fonts/dmsans-bold-webfont.woff") format("woff");
+  src: url('/src/fonts/dmsans-bold-webfont.woff');
+  src: local(''), url('/src/fonts/dmsans-bold-webfont.woff2') format('woff2'),
+    url('/src/fonts/dmsans-bold-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 500;
   font-style: italic;
-  src: url("/src/fonts/dmsans-mediumitalic-webfont.woff");
-  src: local(""), url("/src/fonts/dmsans-mediumitalic-webfont.woff2") format("woff2"), url("/src/fonts/dmsans-mediumitalic-webfont.woff") format("woff");
+  src: url('/src/fonts/dmsans-mediumitalic-webfont.woff');
+  src: local(''),
+    url('/src/fonts/dmsans-mediumitalic-webfont.woff2') format('woff2'),
+    url('/src/fonts/dmsans-mediumitalic-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 500;
   font-style: normal;
-  src: url("/src/fonts/dmsans-medium-webfont.woff");
-  src: local(""), url("/src/fonts/dmsans-medium-webfont.woff2") format("woff2"), url("/src/fonts/dmsans-medium-webfont.woff") format("woff");
+  src: url('/src/fonts/dmsans-medium-webfont.woff');
+  src: local(''), url('/src/fonts/dmsans-medium-webfont.woff2') format('woff2'),
+    url('/src/fonts/dmsans-medium-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 400;
   font-style: italic;
-  src: url("/src/fonts/dmsans-italic-webfont.woff");
-  src: local(""), url("/src/fonts/dmsans-italic-webfont.woff2") format("woff2"), url("/src/fonts/dmsans-italic-webfont.woff") format("woff");
+  src: url('/src/fonts/dmsans-italic-webfont.woff');
+  src: local(''), url('/src/fonts/dmsans-italic-webfont.woff2') format('woff2'),
+    url('/src/fonts/dmsans-italic-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 400;
   font-style: normal;
-  src: url("/src/fonts/dmsans-regular-webfont.woff");
-  src: local(""), url("/src/fonts/dmsans-regular-webfont.woff2") format("woff2"), url("/src/fonts/dmsans-regular-webfont.woff") format("woff");
+  src: url('/src/fonts/dmsans-regular-webfont.woff');
+  src: local(''), url('/src/fonts/dmsans-regular-webfont.woff2') format('woff2'),
+    url('/src/fonts/dmsans-regular-webfont.woff') format('woff');
 }
 a {
   text-decoration: none;
@@ -74,7 +82,11 @@ p {
   height: 490px;
   padding-top: 24px;
   position: relative;
-  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, var(--accent-primary) 18.03%, var(--background-white) 100%);
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    var(--accent-primary) 18.03%,
+    var(--background-white) 100%
+  );
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
 }
@@ -95,11 +107,11 @@ p {
   margin-right: 12px;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-weight: 700;
   font-style: normal;
   font-size: 28px;
-  line-height: 1, 14%;
+  line-height: 1.14%;
   letter-spacing: -0.04em;
 }
 
@@ -107,7 +119,8 @@ p {
   display: flex;
   align-items: center;
 }
-.support__link:hover, .support__link:focus {
+.support__link:hover,
+.support__link:focus {
   border-bottom: 1px solid var(--accent-secondary);
 }
 
@@ -115,11 +128,11 @@ p {
   width: 14px;
   height: 18px;
   margin-right: 16px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1, 29%;
+  line-height: 1.29%;
   letter-spacing: -0.04em;
   color: var(--background-white);
 }
@@ -157,4 +170,4 @@ p {
 .swiper-button-next:after {
   font-size: 16px !important;
   font-weight: 900 !important;
-}/*# sourceMappingURL=support.css.map */
+} /*# sourceMappingURL=support.css.map */
