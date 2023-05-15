@@ -96,9 +96,11 @@ p {
 }
 
 .support__number {
-  width: 14px;
   height: 18px;
   margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-family: 'DM Sans';
   font-style: normal;
