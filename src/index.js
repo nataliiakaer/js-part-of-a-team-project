@@ -1,9 +1,10 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper from 'swiper';
+//import Swiper, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import { supportList } from './js/support_list';
 import { createImageItemMurkup } from './js/createMarkupSupportSection';
 
-Swiper.use(Navigation);
+//Swiper.use(Navigation);
 
 const supportContainer = document.querySelector('.swiper-wrapper');
 const imageMarkup = createImageItemMurkup(supportList);
@@ -13,7 +14,7 @@ supportContainer.insertAdjacentHTML('beforeend', imageMarkup);
 swiperContainer = document.querySelector('.swiper-container');
 
 swiperOptions = {
-  modules: [Navigation],
+ // modules: [Navigation],
   direction: 'vertical',
   slidesPerView: 4,
   spaceBetween: 20,
