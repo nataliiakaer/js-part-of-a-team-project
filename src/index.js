@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import { supportList } from './js/support_list';
 import { createImageItemMurkup } from './js/createMarkupSupportSection';
@@ -11,7 +11,7 @@ supportContainer.insertAdjacentHTML('beforeend', imageMarkup);
 swiperContainer = document.querySelector('.swiper-container');
 
 swiperOptions = {
-  modules: [Navigation, Pagination],
+  modules: [Navigation],
   direction: 'vertical',
   slidesPerView: 4,
   spaceBetween: 20,
