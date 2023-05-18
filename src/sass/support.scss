@@ -1,5 +1,9 @@
+@import './variables/media';
 @import './variables/colors';
-@import './variables/fonts';
+// @import './variables/fonts';
+@import './theme-light';
+@import './theme-dark';
+
 a {
   text-decoration: none;
 }
@@ -19,24 +23,29 @@ p {
   padding: 0;
 }
 
+body {
+  padding: 15px;
+}
+
 .support {
   width: 335px;
   height: 352px;
   padding-top: 24px;
   position: relative;
+  margin-bottom: 40px;
 
   background: radial-gradient(
-      183.6% 183.01% at 59.76% -23.42%,
-      var(--accent-primary) 18.03%,
-      var(--background-white) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    183.6% 183.01% at 59.76% -23.42%,
+    var(--accent-primary) 18.03%,
+    var(--background-white) 100%
+  );
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
 
-  @media screen and (min-width: 1440px) {
+  @include tablet {
     width: 356px;
     height: 490px;
+    margin-bottom: 0;
   }
 }
 
@@ -69,14 +78,6 @@ p {
 .support__link {
   display: flex;
   align-items: center;
-
-  // &:hover,
-  // &:focus {
-  //   border-right: 1px solid var(--accent-secondary);
-  //   transition-property: color;
-  //   transition-duration: 250ms;
-  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  // }
 
   &:hover > .support__number,
   &:focus > .support__number {
@@ -112,8 +113,7 @@ p {
 }
 
 .support__img {
-  height: 32px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(100%);
 }
 
 .swiper-container {
@@ -121,7 +121,7 @@ p {
   height: 188px;
   overflow: hidden;
 
-  @media screen and (min-width: 1440px) {
+  @include tablet {
     width: 159px;
     height: 292px;
   }
@@ -131,6 +131,25 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-slide {
+  &:hover,
+  &:focus {
+    border-right: 1px solid var(--accent-secondary);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+div.swiper-slide {
+  display: flex;
+  align-items: center;
+}
+
+a.swiper-button-next {
+  z-index: 1 !important;
 }
 
 .swiper-button-next {
@@ -146,7 +165,7 @@ p {
   right: auto !important;
   left: auto !important;
 
-  @media screen and (min-width: 1440px) {
+  @include tablet {
     top: 440px !important;
   }
 }
@@ -154,4 +173,84 @@ p {
 .swiper-button-next:after {
   font-size: 16px !important;
   font-weight: 900 !important;
+}
+
+// -----Switch-----
+
+.header__switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.switch-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+.switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  &__input {
+    display: none;
+    &:checked + .switch__icon {
+      background: linear-gradient(#4f2ee8, #686868);
+      &:before {
+        transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+      }
+      &:after {
+        transform: translate3d(20px, 2px, 0);
+      }
+    }
+  }
+  &__icon {
+    position: relative;
+    display: inline-block;
+    max-width: 42px;
+    min-width: 42px;
+    min-height: 24px;
+    max-height: 24px;
+    background-color: #bebebe;
+    border-radius: 22px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 38px;
+      height: 20px;
+      background: linear-gradient(#4f2ee8, #dcdcdc);
+      border-radius: 11px;
+      transform: translate3d(2px, 2px, 0) scaleX(1);
+      transition: all 0.25s linear;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 11px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+      transform: translate3d(2px, 2px, 0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &__span {
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: 400;
+  }
 }
